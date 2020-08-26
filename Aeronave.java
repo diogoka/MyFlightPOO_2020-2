@@ -23,6 +23,6 @@ public class Aeronave {
     }
 
     public String toString(){
-        return "Dados Aeronave" + codigo + descricao + capacidade;
+        return "Dados da Aeronave" + codigo + descricao + capacidade;
     }
 }
