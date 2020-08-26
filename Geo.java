@@ -7,11 +7,11 @@ public Geo (double umaLatitude, double umaLongitude){
         longitude = umaLongitude;
     }
 
-    public String getLatitude(){
+    public double getLatitude(){
         return latitude;
     }
 
-    public String getLongitude(){
+    public double getLongitude(){
         return longitude;
     }
 
