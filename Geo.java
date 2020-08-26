@@ -3,8 +3,8 @@ public class Geo {
     private double longitude;
 
 public Geo (double umaLatitude, double umaLongitude){
-        latitude = umaLatitude;
-        longitude = umaLongitude;
+        this.latitude = umaLatitude;
+        this.longitude = umaLongitude;
     }
 
     public double getLatitude(){

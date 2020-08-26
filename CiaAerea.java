@@ -4,8 +4,8 @@ public class CiaAerea {
     private String nome;
 
     public CiaAerea (String umCodigo, String umNome){
-        codigo = umCodigo;
-        nome = umNome;        
+        this.codigo = umCodigo;
+        this.nome = umNome;        
     }
 
     public String getCodigo(){

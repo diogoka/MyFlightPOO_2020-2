@@ -5,9 +5,9 @@ public class Aeronave {
     private int capacidade;
 
     public Aeronave (String umCodigo, String umaDescricao, int umaCapacidade){
-        codigo = umCodigo;
-        descricao = umaDescricao;
-        capacidade = umaCapacidade;
+        this.codigo = umCodigo;
+        this.descricao = umaDescricao;
+        this.capacidade = umaCapacidade;
     }
 
     public String getCodigo(){
