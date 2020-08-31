@@ -1,4 +1,4 @@
-public class main {
+public class Aplicacao {
     
     public static void main (String args []){
         System.out.println("Em desenvolvimento");

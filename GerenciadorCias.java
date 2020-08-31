@@ -21,7 +21,7 @@ public class GerenciadorCias {
         Companhias.add(umaCiaAerea);
     }
 
-    public CiaAerea pesquisar (String umCodigo){
+    public CiaAerea pesquisarPorCodigo (String umCodigo){
         for(CiaAerea CIA : Companhias){
             if(CIA.getCodigo() == umCodigo){
                 return CIA;
@@ -29,6 +29,16 @@ public class GerenciadorCias {
         }
         return null;
     }
+
+    public CiaAerea pesquisarPorNome (String umNome){
+        for(CiaAerea CIA : Companhias){
+            if(CIA.getNome() == umNome){
+                return CIA;
+            }                
+        }
+        return null;
+    }
+
 
     public void listar(){
         System.out.println("Cadastro das Companhias Aereas");
