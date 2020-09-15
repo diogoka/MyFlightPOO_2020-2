@@ -31,7 +31,7 @@ public class GerenciadorVoos {
     }
 
     public void listar(){
-        System.out.println("Voos");
+        System.out.println("Voos:");
         for(Voo voo : voos){
             System.out.println(voo.toString());
         }

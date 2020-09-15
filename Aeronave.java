@@ -23,6 +23,6 @@ public class Aeronave {
     }
 
     public String toString(){
-        return "Dados da Aeronave" + codigo + descricao + capacidade;
+        return getCodigo() + "-" + getDescricao() + " " + getCapacidade() + " passageiros";
     }
 }

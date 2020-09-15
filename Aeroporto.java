@@ -22,7 +22,7 @@ public class Aeroporto {
     }
 
        public String toString(){
-        return "Dados do Aeroporto" + codigo + nome;
+        return getCodigo() + "-" + getNome();
     }  
 
 }

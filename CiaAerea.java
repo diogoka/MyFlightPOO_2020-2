@@ -16,7 +16,8 @@ public class CiaAerea {
         return nome;
     }
 
-       public String toString(){
-        return "Dados da Companhia Aérea" + codigo + nome;
-    }    
+    public String toString() {
+		return getCodigo() + "-" + getNome();
+	}
+  
 }

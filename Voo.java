@@ -36,4 +36,13 @@ public class Voo {
 	public void setStatus(Status novo) {
 		this.status = novo;
 	}
+
+	public String toString() {
+		return  "Voo {"+
+				"Data e Hora: " + getDatahora() +
+				", Rota{" + getRota() +
+				"}, Status: " + getStatus() +
+				"}";
+	}
+
 }

@@ -41,7 +41,7 @@ public class GerenciadorCias {
 
 
     public void listar(){
-        System.out.println("Cadastro das Companhias Aereas");
+        System.out.println("Companhias Aéreas Cadastradas: ");
         for (CiaAerea CIA : Companhias){
             System.out.println(CIA.toString());
         }

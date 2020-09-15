@@ -31,7 +31,7 @@ public class GerenciadorAeronaves {
     }
 
     public void listar(){
-        System.out.println("Lista de Aeronaves");
+        System.out.println("Lista de Aeronaves:");
         for (Aeronave Aero : Aeronaves){
             System.out.println(Aero.toString());
         }
