@@ -9,6 +9,12 @@ public class Voo {
 	private Duration duracao;
 	private Rota rota;
 	private Status status;
+
+	public Voo(Rota umaRota, Duration umaDuracao) {
+		this.rota = umaRota;		
+		this.duracao = umaDuracao;
+		this.status = Status.CONFIRMADO; // default é confirmado
+	}
 	
 	public Voo(Rota umaRota, LocalDateTime umaDatahora, Duration umaDuracao) {
 		this.rota = umaRota;
