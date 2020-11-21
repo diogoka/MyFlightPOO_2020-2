@@ -69,7 +69,12 @@ public class Aplicacao {
         instanceVoos.inserir(new Voo(instanceRotas.pesquisarPorOrigemDestino(instanceAeroportos.pesquisarPorCod("GRU"),instanceAeroportos.pesquisarPorCod("POA")),
         LocalDateTime.of(2020, Month.SEPTEMBER, 14, 19, 30, 00), Duration.ofMinutes(90)));
 
+        //INSERIR VOO DIRETO
+        instanceVoos.inserir(new VooDireto(LocalDateTime.of(2020, Month.SEPTEMBER, 14, 19, 30, 00), Voo.Status.CONFIRMADO));
+
         //INSERIR VOO_ESCALA
+        instanceVoos.inserir(new VooEscalas(instanceRotas.pesquisarPorOrigemDestino(instanceAeroportos.pesquisarPorCod("POA"),instanceAeroportos.pesquisarPorCod("GRU")),instanceRotas.pesquisarPorOrigemDestino(instanceAeroportos.pesquisarPorCod("GRU"),instanceAeroportos.pesquisarPorCod("POA")),
+                LocalDateTime.of(2020, Month.SEPTEMBER, 14, 19, 30, 00), Duration.ofMinutes(90)));
 
 
         System.out.println("\n");
