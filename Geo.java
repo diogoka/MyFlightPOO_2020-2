@@ -15,7 +15,7 @@ public Geo (double umaLatitude, double umaLongitude){
         return longitude;
     }
 
-    public static double calcular(Geo obj, Geo obj2) {
+    public static double calcularDistancia(Geo obj, Geo obj2) {
         double earthR = 6372.8;
         double dLat = Math.toRadians(obj2.latitude - obj.latitude);
         double dLon = Math.toRadians(obj2.longitude - obj.longitude);
@@ -24,6 +24,19 @@ public Geo (double umaLatitude, double umaLongitude){
 
         double a = Math.pow(Math.sin(dLat / 2),2) + Math.pow(Math.sin(dLon / 2),2) * Math.cos(obj.latitude) * Math.cos(obj2.latitude);
         double c = 2 * Math.asin(Math.sqrt(a));
+        return earthR * c;
+    }
+
+    public double calcularDistanciaArmazenada(Geo obj) {
+        double earthR = 6372.8;
+        double dLat = Math.toRadians(this.latitude - obj.latitude);
+        double dLon = Math.toRadians(this.longitude - obj.longitude);
+        obj.latitude = Math.toRadians(obj.latitude);
+        this.latitude = Math.toRadians(this.latitude);
+
+        double a = Math.pow(Math.sin(dLat / 2),2) + Math.pow(Math.sin(dLon / 2),2) * Math.cos(obj.latitude) * Math.cos(this.latitude);
+        double c = 2 * Math.asin(Math.sqrt(a));
+
         return earthR * c;
     }
 
