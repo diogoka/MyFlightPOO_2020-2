@@ -2,7 +2,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Voo {
-    
+
     public enum Status { CONFIRMADO, ATRASADO, CANCELADO };
 	
 	private LocalDateTime datahora;
@@ -14,6 +14,11 @@ public class Voo {
 		this.rota = umaRota;		
 		this.duracao = umaDuracao;
 		this.status = Status.CONFIRMADO; // default é confirmado
+	}
+
+	public Voo(LocalDateTime datahora, Status status){
+		this.datahora = datahora;
+		this.status = status;
 	}
 	
 	public Voo(Rota umaRota, LocalDateTime umaDatahora, Duration umaDuracao) {
