@@ -1,4 +1,4 @@
-public class Rota {
+public class Rota implements Comparable<CiaAerea>{
     private CiaAerea cia;
 	private Aeroporto origem;
 	private Aeroporto destino;
@@ -34,4 +34,9 @@ public class Rota {
 				", Aeronave: " + getAeronave();
 	}
 
+
+	@Override
+	public int compareTo(CiaAerea C1) {
+		return this.cia.getNome().compareTo(C1.getNome());
+	}
 }

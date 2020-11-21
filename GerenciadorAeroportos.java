@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GerenciadorAeroportos {
     
@@ -34,6 +36,15 @@ public class GerenciadorAeroportos {
         for(Aeroporto aeroporto : aeroportos){
             System.out.println(aeroporto.toString());
         }
+    }
+
+    public static void ordenaPorNome(ArrayList<Aeroporto> Aero){
+        Collections.sort(Aero, new Comparator<Aeroporto>() {
+            @Override
+            public int compare(Aeroporto A1, Aeroporto A2) {
+                return A1.getNome().compareTo(A2.getNome());
+            }
+        });
     }
 
 }
