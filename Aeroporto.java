@@ -1,4 +1,4 @@
-public class Aeroporto {
+public class Aeroporto implements Comparable<Aeroporto>{
     
     private String codigo;
     private String nome;
@@ -23,6 +23,10 @@ public class Aeroporto {
 
        public String toString(){
         return getCodigo() + "-" + getNome();
-    }  
+    }
 
+    @Override
+    public int compareTo(Aeroporto outroAeroporto) {
+        return this.nome.compareTo(outroAeroporto.nome);
+    }
 }

@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GerenciadorCias {
 
@@ -46,6 +48,15 @@ public class GerenciadorCias {
             System.out.println(CIA.toString());
         }
 
+    }
+
+    public static void ordenaPorNome(ArrayList<CiaAerea> Cia){
+        Collections.sort(Cia, new Comparator<CiaAerea>() {
+            @Override
+            public int compare(CiaAerea C1, CiaAerea C2) {
+                return C1.getNome().compareTo(C2.getNome());
+            }
+        });
     }
 
 
